@@ -5,7 +5,7 @@
     xmlns:viewModel="using:TwitterClient.ViewModel"
     RequestedTheme="Dark">
     <Application.Resources>
-        <viewModel:ViewModelLocator xmlns:vm="clr-namespace:TwitterClient"
-                           x:Key="Locator" />
+        <viewModel:ViewModelLocator xmlns:vm="clr-namespace:TwitterClient" x:Key="Locator" />
     </Application.Resources>
 </Application>
+    
