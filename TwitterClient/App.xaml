@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="TwitterClient.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModel="using:TwitterClient.ViewModel"
+    RequestedTheme="Dark">
+    <Application.Resources>
+        <viewModel:ViewModelLocator xmlns:vm="clr-namespace:TwitterClient"
+                           x:Key="Locator" />
+    </Application.Resources>
+</Application>

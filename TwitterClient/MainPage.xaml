@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="TwitterClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TwitterClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+    mc:Ignorable="d" d:DesignWidth="750">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center">Tweeter</TextBlock>
+        <ListView Grid.Row="1" ItemsSource="{Binding TweetList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical" Width="750">
+                            <TextBlock Text="{Binding User}"></TextBlock>
+                            <TextBlock TextWrapping="WrapWholeWords" Text="{Binding TweetMeesage}"></TextBlock>
+                        </StackPanel>
+                        <Image Source="{Binding ImageUrl}" Height="80" Width="160"></Image>
+                        <Rectangle HorizontalAlignment="Stretch" Fill="Gray" Height="1"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
